@@ -14,6 +14,7 @@ import { Products } from './component/Productslists/DummyProducts';
 import Cart from './component/Cart';
 import { userList } from './component/users/UserList';
 import LoginPage from './component/Login/LoginPage';
+import Navbar from './assets/Banners&sliders/Navbar';
 
 function App() {
   const [product, setProduct] = useState(Products);
@@ -23,6 +24,7 @@ function App() {
   return (
     <>
       <Mycontext.Provider value={{ product, setProduct, cart, setCart ,user,setUser,isloggedin,setLoggedin}}>
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart/:productId' element={<Cart />} />

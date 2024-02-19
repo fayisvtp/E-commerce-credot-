@@ -11,16 +11,17 @@ function Cart() {
   console.log(selectedProduct);
 
   return (
-    <div className='bg-light'>
+    <div className='bg-white'>
       {selectedProduct && (
-        <div className='cart col-8 d-flex h-full m-5'>
-        <div className='image  col-4 m-auto p-3 card ' style={{backgroundColor:'#F9F9F9'}}>
+        <div className='cart col-10 d-flex h-full m-5'>
+        <div className='image  col-4 m-5 p-3 card  shadow' style={{backgroundColor:'#F9F9F9'}}>
             <img className='w-50 m-auto p-3' src={selectedProduct.src} alt="" />
         </div>
-        <div className='col-4'>
+        <div className='col-6 m-5 p-3 '>
 
-          <h1>{selectedProduct.name}</h1>
-          <p>{selectedProduct.category}</p>
+        <h1 className="text-2xl font-bold">{selectedProduct.name}</h1>
+
+          <p className='text-danger'>{selectedProduct.category}</p>
           <p>MRP {selectedProduct.prize}</p>
           <p>Offer Price {selectedProduct.offerPrize}</p>
         </div>
